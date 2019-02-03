@@ -1,0 +1,33 @@
+.Terminal {
+}
+
+.Terminal > div {
+  margin: 15px;
+}
+
+.Panel {
+  background: #333945;
+  border-radius: 4px;
+}
+
+.Panel > header {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+
+}
+
+.Terminal-market {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+}
+
+.Terminal-market > div {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.Terminal-market > div:not(:first-child) {
+  margin-left: 15px;
+}
