@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Aside.css';
+import { NavLink } from "react-router-dom";
 
 class Aside extends Component {
   render() {
@@ -13,17 +14,26 @@ class Aside extends Component {
         <div className="Aside-panel">
           <h1>ETH-USD (x100)</h1>
           <ul>
-            <li><a>Perpetual</a></li>
-            <li><a>29 Mar 2019</a></li>
-            <li><a>29 Jun 2019</a></li>
+            <li><NavLink to="/" exact className="Aside-link" activeClassName="Aside-selected">
+              Perpetual
+              <span className="Aside-price">108.75</span>
+            </NavLink></li>
+            <li><NavLink to="/bingo" className="Aside-link" activeClassName="Aside-selected">
+            29 Mar 2019
+            <span className="Aside-price">108.75</span>
+            </NavLink></li>
+            <li><NavLink to="/bongo" className="Aside-link" activeClassName="Aside-selected">
+            29 Jun 2019
+            <span className="Aside-price">108.75</span>
+            </NavLink></li>
           </ul>
         </div>
         <div className="Aside-separator" />
         <div className="Aside-panel">
           <ul>
-            <li><a>Index</a></li>
-            <li><a>Insurance Fund</a></li>
-            <li><a>Knowledge Base</a></li>
+            <li><NavLink to="/index" className="Aside-link" activeClassName="Aside-selected">Index</NavLink></li>
+            <li><NavLink to="/fund" className="Aside-link" activeClassName="Aside-selected">Insurance Fund</NavLink></li>
+            <li><NavLink to="/kb" className="Aside-link" activeClassName="Aside-selected">Knowledge Base</NavLink></li>
           </ul>
         </div>
       </div>

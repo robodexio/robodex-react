@@ -1,3 +1,40 @@
 .Header {
-  
+  position: relative;
+  color: #000;
+  width: 100%;
+}
+
+.Header-left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.Header-center {
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.Header-right {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.Header-left > h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  font-size: 30px;
+  padding-top: 4px;
+}
+
+.Header-index {
+  margin-left: 15px;
+  line-height: 50px;
 }
