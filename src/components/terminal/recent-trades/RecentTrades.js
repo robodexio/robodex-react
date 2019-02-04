@@ -5,7 +5,10 @@ class RecentTrades extends Component {
   render() {
     return (
       <div className="RecentTrades Panel">
-        Recent Trades
+        <header>Recent Trades</header>
+        <main>
+          
+        </main>
       </div>
     );
   }
