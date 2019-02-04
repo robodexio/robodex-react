@@ -1,0 +1,52 @@
+.Aside {
+  font-size: 15px;
+  color: #747E8D;
+}
+
+.Aside h1 {
+  margin: 0px;
+  color: #fff;
+  font-size: 15px;
+  padding-left: 10px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.Aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Aside li a {
+  line-height: 32px;
+  padding-left: 10px;
+}
+
+.Aside-time {
+  display: table-cell;
+  vertical-align: middle;
+  height: 36px;
+  width: 100%;
+}
+
+.Aside-status {
+  display: inline-block;
+  border-radius: 100%;
+  background: #01D25B;
+  height: 12px;
+  width: 12px;
+  margin-left: 10px;
+  margin-right: 8px;
+}
+
+.Aside-panel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.Aside-separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
