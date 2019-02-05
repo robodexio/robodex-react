@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 class Header extends Component {
   renderIndex() {
-    const index = this.index;
+    const index = this.props.index;
     if (index) {
       return (
         <div className="Header-index">Etherium Index: {index.price}</div>

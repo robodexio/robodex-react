@@ -10,6 +10,8 @@ const reducer = (state = initialState, action) => {
       return { ...state, time: action.time };
     case 'ONLINE': 
       return { ...state, online: action.online };
+    case 'INDEX':
+      return { ...state, index: action.index };
     default:
       return state;
   }

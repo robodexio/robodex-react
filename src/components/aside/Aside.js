@@ -2,22 +2,14 @@ import React, { Component } from 'react';
 import './Aside.css';
 import { withRouter, NavLink } from "react-router-dom";
 import { connect } from 'react-redux';
+import dateformat from 'dateformat';
 
 class Aside extends Component {
   renderTime() {
     const online = this.props.online ? this.props.online : false;
     const onlineClass = online ? 'green-bg' : 'red-bg';
-    const time = '' || this.props.online || new Intl.DateTimeFormat('en-US', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false,
-      timeZone: 'UTC'
-    }).format(this.props.time)
-    
+    const time = '' || this.props.online || dateformat(this.props.time, 'd mmm yyyy HH:MM:ss', true);
+
     return (
       <div className="Aside-time">
         <div className={`Aside-status ${onlineClass}`}></div>

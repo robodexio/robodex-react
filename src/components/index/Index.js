@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
 import './Index.css';
 import { connect } from 'react-redux';
+import dateformat from 'dateformat';
 
 class Index extends Component {
   renderExchange(ex) {
-    return (
-      <tr key={ex.name}>
-        <td>ex.name</td>
-        <td className="red">{ex.price ? ex.price : 0.00}</td>
-        <td>{ex.online ? new Date(ex.time).toLocaleTimeString : 'No connection'}</td>
-        <td className="red">{ex.weight ? ex.weight.toFixed(2) + '%' : '0.00%'}</td>
-      </tr>
-    );
+    if (ex.online) {
+      const weightClass = ex.weight ? 'green' : 'red'
+      return (
+        <tr key={ex.name}>
+          <td>{ex.name}</td>
+          <td className={weightClass}>{ex.price.toFixed(2)}</td>
+          <td>{dateformat(ex.time, 'HH:MM:ss', true)}</td>
+          <td className={weightClass}>{ex.weight ? ex.weight.toFixed(2) + '%' : '0.00%'}</td>
+        </tr>
+      );
+    } else {
+      return (
+        <tr key={ex.name}>
+          <td>{ex.name}</td>
+          <td className="red">0.00</td>
+          <td>No connection</td>
+          <td className="red">0.00%</td>
+        </tr>
+      );
+    }
   }
 
   renderExchanges() {
-    let exchanges = [];
-    const index = this.index;
-    if (index) {
-      exchanges = index.exchanges.map(ex => this.renderExchange(ex));
+    let exchanges = []
+    if (this.props.index) {
+      exchanges = this.props.index.exchanges.map(this.renderExchange);
     }
 
     return (
