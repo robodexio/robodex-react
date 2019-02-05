@@ -33,3 +33,24 @@
 .App > main {
   overflow: scroll
 }
+
+.red {
+  color: #FE4640;
+}
+
+.green {
+  color: #01D25B;
+}
+
+.red-bg {
+  background: #FE4640;
+}
+
+.green-bg {
+  background: #01D25B;
+}
+
+.HorScrollable {
+  width: 100%;
+  overflow-x: auto;
+}

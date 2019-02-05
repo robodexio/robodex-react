@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import './Header.css';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Header extends Component {
+  renderIndex() {
+    const index = this.index;
+    if (index) {
+      return (
+        <div className="Header-index">Etherium Index: {index.price}</div>
+      );
+    } else {
+      return (
+        <div className="Header-index">Etherium Index</div>
+      );
+    }
+  }
+
   render() {
     return (
       <div className="Header">
@@ -9,7 +24,7 @@ class Header extends Component {
           <h1>Terebit</h1>
         </div>
         <div className="Header-center">
-          <div className="Header-index">Etherium Index: 108.43</div>
+          {this.renderIndex()}
         </div>
         <div className="Header-right">
         </div>
@@ -18,4 +33,6 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(connect(state => ({
+  index: state.index
+}))(Header));

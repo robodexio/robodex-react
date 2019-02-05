@@ -15,7 +15,7 @@ class App extends Component {
           <aside><Aside /></aside>
           <main>
             <Route exact path="/" component={Terminal} />
-            <Route exact path="/index" component={Index} />
+            <Route path="/index" component={Index} />
           </main>
         </div>
       </Router>
