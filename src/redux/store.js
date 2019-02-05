@@ -3,7 +3,7 @@ import reducer from './reducer';
 const store = createStore(reducer);
 export default store;
 
-const ws = new WebSocket('ws://api.robodex.io');
+const ws = new WebSocket('wss://api.robodex.io');
 ws.onmessage = msg => {
   console.log(msg);
   const json = JSON.parse(msg.data);
