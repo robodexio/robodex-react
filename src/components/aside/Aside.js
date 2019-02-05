@@ -23,11 +23,14 @@ class Aside extends Component {
   }
 
   renderFutures() {
+    console.log('BINGO')
+    console.log(this.props.orderbook)
+    const price = this.props.orderbook ? this.props.orderbook.mark.toFixed(2) : '';
     return (
       <div className="Aside-panel">
         <h1>ETH-USD (x100)</h1>
         <ul>
-          <li><Link to="/" exact>Perpetual <span className="Aside-price">108.75</span></Link></li>
+          <li><Link to="/" exact>Perpetual <span className="Aside-price">{price}</span></Link></li>
         </ul>
       </div>
     );
@@ -62,5 +65,6 @@ class Aside extends Component {
 export default withRouter(connect(state => ({
   online: state.online,
   time: state.time,
-  instruments: state.instruments
+  instruments: state.instruments,
+  orderbook: state.orderbook
 }))(Aside));

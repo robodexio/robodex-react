@@ -14,6 +14,8 @@ const reducer = (state = initialState, action) => {
       return { ...state, index: action.index };
     case 'ACCOUNT':
       return { ...state, account: action.account };
+    case 'ORDERBOOK':
+      return { ...state, orderbook: action.orderbook };
     default:
       return state;
   }

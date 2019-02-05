@@ -30,5 +30,11 @@ ws.onmessage = msg => {
         account: json.data
       })
     }
+    if (json.stream === 'orderbook') {
+      store.dispatch({
+        type: 'ORDERBOOK',
+        orderbook: json.data
+      })
+    }
   }
 };

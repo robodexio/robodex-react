@@ -26,15 +26,15 @@ class Header extends Component {
 
     return (
       <div>
-        <div class="Header-margin">
+        <div className="Header-margin">
           <div><span>IM:</span> {imPercent}</div>
           <div><span>MM:</span> {mmPercent}</div>
         </div>
-        <div class="Header-balance">
+        <div className="Header-balance">
           <div><span>Equity</span></div>
           <div>{equity}</div>
         </div>
-        <div class="Header-balance">
+        <div className="Header-balance">
           <div><span>Available</span></div>
           <div>{available}</div>
         </div>
