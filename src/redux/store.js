@@ -24,5 +24,11 @@ ws.onmessage = msg => {
         index: json.data
       });
     }
+    if (json.stream === 'account') {
+      store.dispatch({
+        type: 'ACCOUNT',
+        account: json.data
+      })
+    }
   }
 };

@@ -11,13 +11,16 @@ class Positions extends Component {
             <table>
               <thead>
                 <tr>
-                  <th>Side</th>
-                  <th>Quantity</th>
-                  <th>Quantity ETH</th>
-                  <th>Price</th>
-                  <th>Type</th>
-                  <th>Fees</th>
-                  <th>Date Time</th>
+                  <th>Size</th>
+                  <th>Size ETH</th>
+                  <th>Avg. Price</th>
+                  <th>Mark Price</th>
+                  <th>PNL</th>
+                  <th>Session UPL</th>
+                  <th>Session RPL</th>
+                  <th>Initial Margin</th>
+                  <th>Maintenance Margin</th>
+                  <th>Close</th>
                 </tr>
               </thead>
               <tbody>

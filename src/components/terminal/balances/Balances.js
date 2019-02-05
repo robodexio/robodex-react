@@ -9,11 +9,11 @@ class Balances extends Component {
       return (
         <tr>
           <td>ETH</td>
-          <td>{account.equity}</td>
-          <td>{account.availableFunds}</td>
-          <td>{account.marginBalance}</td>
-          <td>{account.initialMargin}</td>
-          <td>{account.maintenanceMargin}</td>
+          <td>{account.equity.toFixed(4)}</td>
+          <td>{account.availableFunds.toFixed(4)}</td>
+          <td>{account.marginBalance.toFixed(4)}</td>
+          <td>{account.initialMargin.toFixed(4)}</td>
+          <td>{account.maintenanceMargin.toFixed(4)}</td>
         </tr>
       );
     } else {

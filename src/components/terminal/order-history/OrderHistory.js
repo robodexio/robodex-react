@@ -12,12 +12,14 @@ class OrderHistory extends Component {
               <thead>
                 <tr>
                   <th>Side</th>
-                  <th>Quantity</th>
-                  <th>Quantity ETH</th>
+                  <th>Size</th>
                   <th>Price</th>
-                  <th>Type</th>
-                  <th>Fees</th>
+                  <th>Completed</th>
+                  <th>Status</th>
+                  <th>Avg. Price</th>
                   <th>Date Time</th>
+                  <th>PNL</th>
+                  <th>Type</th>
                 </tr>
               </thead>
               <tbody>
