@@ -16,6 +16,7 @@ class Terminal extends Component {
     return (
       <div className="Terminal">
         <Balances />
+        <Plot />
         <Instrument />
         <div className="Terminal-market">
           <Trade />

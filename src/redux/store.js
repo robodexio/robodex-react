@@ -3,7 +3,7 @@ import reducer from './reducer';
 const store = createStore(reducer);
 export default store;
 
-const ws = new WebSocket('ws://localhost:9001');
+const ws = new WebSocket('ws://178.128.169.118:9000');
 ws.onmessage = msg => {
   console.log(msg);
   const json = JSON.parse(msg.data);
