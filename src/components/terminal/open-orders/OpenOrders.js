@@ -7,7 +7,7 @@ class OpenOrders extends Component {
       <div className="OpenOrders Panel">
         <header>Open Orders</header>
         <main>
-          <div class="table-scrollable-wrapper">
+          <div className="table-scrollable-wrapper">
             <table>
               <thead>
                 <tr>

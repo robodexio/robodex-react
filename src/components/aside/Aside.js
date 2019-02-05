@@ -4,11 +4,15 @@ import { withRouter, NavLink } from "react-router-dom";
 import { connect } from 'react-redux';
 import dateformat from 'dateformat';
 
+function Link(props) {
+  return <NavLink {...props} className="Aside-link" activeClassName="Aside-selected" />;
+}
+
 class Aside extends Component {
   renderTime() {
-    const online = this.props.online ? this.props.online : false;
+    const online = !!this.props.online;
     const onlineClass = online ? 'green-bg' : 'red-bg';
-    const time = '' || this.props.online || dateformat(this.props.time, 'd mmm yyyy HH:MM:ss', true);
+    const time = '' || (this.props.time && dateformat(this.props.time, 'd mmm yyyy HH:MM:ss', true));
 
     return (
       <div className="Aside-time">
@@ -23,18 +27,7 @@ class Aside extends Component {
       <div className="Aside-panel">
         <h1>ETH-USD (x100)</h1>
         <ul>
-          <li><NavLink to="/" exact className="Aside-link" activeClassName="Aside-selected">
-            Perpetual
-        <span className="Aside-price">108.75</span>
-          </NavLink></li>
-          <li><NavLink to="/bingo" className="Aside-link" activeClassName="Aside-selected">
-            29 Mar 2019
-      <span className="Aside-price">108.75</span>
-          </NavLink></li>
-          <li><NavLink to="/bongo" className="Aside-link" activeClassName="Aside-selected">
-            29 Jun 2019
-      <span className="Aside-price">108.75</span>
-          </NavLink></li>
+          <li><Link to="/" exact>Perpetual <span className="Aside-price">108.75</span></Link></li>
         </ul>
       </div>
     );
@@ -44,9 +37,9 @@ class Aside extends Component {
     return (
       <div className="Aside-panel">
         <ul>
-          <li><NavLink to="/index" className="Aside-link" activeClassName="Aside-selected">Index</NavLink></li>
-          <li><NavLink to="/fund" className="Aside-link" activeClassName="Aside-selected">Insurance Fund</NavLink></li>
-          <li><NavLink to="/kb" className="Aside-link" activeClassName="Aside-selected">Knowledge Base</NavLink></li>
+          <li><Link to="/index">Index</Link></li>
+          <li><Link to="/fund">Insurance Fund</Link></li>
+          <li><Link to="/kb">Knowledge Base</Link></li>
         </ul>
       </div>
     );

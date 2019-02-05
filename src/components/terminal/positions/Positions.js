@@ -7,7 +7,7 @@ class Positions extends Component {
       <div className="Positions Panel">
         <header>Positions</header>
         <main>
-          <div class="table-scrollable-wrapper">
+          <div className="table-scrollable-wrapper">
             <table>
               <thead>
                 <tr>

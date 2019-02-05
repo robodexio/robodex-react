@@ -13,7 +13,10 @@ ws.onmessage = msg => {
         type: 'TIME',
         time: json.data
       });
-      
+      store.dispatch({
+        type: 'ONLINE',
+        online: true
+      });
     }
     if (json.stream === 'index') {
       store.dispatch({

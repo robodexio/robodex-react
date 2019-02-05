@@ -35,7 +35,7 @@ class Balances extends Component {
       <div className="Balances Panel">
         <header>Balances</header>
         <main>
-          <div class="HorScrollable">
+          <div className="HorScrollable">
             <table>
               <thead>
                 <tr>

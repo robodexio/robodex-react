@@ -6,7 +6,7 @@ class TradeHistory extends Component {
     return (
       <div className="TradeHistory Panel">
         <header>Trade History</header>
-        <div class="table-scrollable-wrapper">
+        <div className="table-scrollable-wrapper">
           <table>
             <thead>
               <tr>

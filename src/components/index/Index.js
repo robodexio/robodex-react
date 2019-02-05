@@ -6,7 +6,7 @@ import dateformat from 'dateformat';
 class Index extends Component {
   renderExchange(ex) {
     if (ex.online) {
-      const weightClass = ex.weight ? 'green' : 'red'
+      const weightClass = ex.weight ? 'green' : 'red';
       return (
         <tr key={ex.name}>
           <td>{ex.name}</td>
@@ -28,7 +28,7 @@ class Index extends Component {
   }
 
   renderExchanges() {
-    let exchanges = []
+    let exchanges = [];
     if (this.props.index) {
       exchanges = this.props.index.exchanges.map(this.renderExchange);
     }

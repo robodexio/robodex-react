@@ -7,7 +7,7 @@ class OrderHistory extends Component {
       <div className="OrderHistory Panel">
         <header>Order History</header>
         <main>
-          <div class="table-scrollable-wrapper">
+          <div className="table-scrollable-wrapper">
             <table>
               <thead>
                 <tr>
