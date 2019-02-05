@@ -23,8 +23,6 @@ class Aside extends Component {
   }
 
   renderFutures() {
-    console.log('BINGO')
-    console.log(this.props.orderbook)
     const price = this.props.orderbook ? this.props.orderbook.mark.toFixed(2) : '';
     return (
       <div className="Aside-panel">

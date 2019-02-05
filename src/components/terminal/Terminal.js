@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './Terminal.css';
-import Balances from './balances/Balances'
-import Plot from './plot/Plot'
-import Instrument from './instrument/Instrument'
-import Trade from './trade/Trade'
-import Orderbook from './orderbook/Orderbook'
-import RecentTrades from './recent-trades/RecentTrades'
-import Positions from './positions/Positions'
-import OpenOrders from './open-orders/OpenOrders'
-import OrderHistory from './order-history/OrderHistory'
-import TradeHistory from './trade-history/TradeHistory'
+import Balances from './Balances/Balances'
+import Plot from './Plot/Plot'
+import Instrument from './Instrument/Instrument'
+import Trade from './Trade/Trade'
+import Orderbook from './Orderbook/Orderbook'
+import RecentTrades from './RecentTrades/RecentTrades'
+import Positions from './Positions/Positions'
+import OpenOrders from './OpenOrders/OpenOrders'
+import OrderHistory from './OrderHistory/OrderHistory'
+import TradeHistory from './TradeHistory/TradeHistory'
 
 class Terminal extends Component {
   render() {

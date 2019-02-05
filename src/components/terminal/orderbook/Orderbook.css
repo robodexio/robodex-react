@@ -1,3 +1,7 @@
 .Orderbook {
   height: 400px;
 }
+
+.Orderbook-prices {
+  height: 50px;
+}

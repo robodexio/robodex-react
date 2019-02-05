@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Orderbook.css';
+import { connect } from 'react-redux';
 
 class Orderbook extends Component {
   renderAsks() {
@@ -25,13 +26,6 @@ class Orderbook extends Component {
     return (
       <div>
         <table>
-          <thead>
-            <tr>
-              <th>Price</th>
-              <th>Size</th>
-              <th>Total</th>
-            </tr>
-          </thead>
           <tbody>
 
           </tbody>
@@ -41,9 +35,12 @@ class Orderbook extends Component {
   }
 
   renderPrices() {
+    const last = this.props.orderbook ? this.props.orderbook.last.toFixed(2) : '';
+    const mark = this.props.orderbook ? this.props.orderbook.mark.toFixed(2) : '';
     return (
-      <div>
-        
+      <div className="Orderbook-prices">
+        <div>Last: {last}</div>
+        <div>Mark: {mark}</div>
       </div>
     );
   }
@@ -63,4 +60,6 @@ class Orderbook extends Component {
   }
 }
 
-export default Orderbook;
+export default connect(state => ({
+  orderbook: state.orderbook
+}))(Orderbook);
