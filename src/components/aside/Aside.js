@@ -40,6 +40,7 @@ class Aside extends Component {
           <li><Link to="/index">Index</Link></li>
           <li><Link to="/fund">Insurance Fund</Link></li>
           <li><Link to="/kb">Knowledge Base</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
       </div>
     );

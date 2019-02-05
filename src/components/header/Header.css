@@ -24,6 +24,7 @@
   right: 0px;
   top: 0px;
   bottom: 0px;
+  font-size: 14px;
 }
 
 .Header-left > h1 {
@@ -37,4 +38,31 @@
 .Header-index {
   margin-left: 15px;
   line-height: 50px;
+  font-size: 16px;
+}
+
+.Header-right > div {
+  display: flex;
+}
+
+.Header-right span {
+  color: #747E8D;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Header-margin {
+  margin-right: 30px;
+  margin-top: 7px;
+}
+
+.Header-margin span {
+  width: 30px;
+  display: inline-block;
+  text-align: right;
+}
+
+.Header-balance {
+  margin-right: 30px;
+  margin-top: 6px;
 }

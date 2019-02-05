@@ -17,6 +17,31 @@ class Header extends Component {
     }
   }
 
+  renderRight() {
+    const account = this.props.account
+    const equity = account ? account.equity.toFixed(4) : ''
+    const available = account ? account.availableFunds.toFixed(4) : ''
+    const imPercent = account ? ((account.initialMargin / account.marginBalance) * 100).toFixed(2) + '%' : '0.00%'
+    const mmPercent = account ? ((account.maintenanceMargin / account.marginBalance) * 100).toFixed(2) + '%' : '0.00%'
+
+    return (
+      <div>
+        <div class="Header-margin">
+          <div><span>IM:</span> {imPercent}</div>
+          <div><span>MM:</span> {mmPercent}</div>
+        </div>
+        <div class="Header-balance">
+          <div><span>Equity</span></div>
+          <div>{equity}</div>
+        </div>
+        <div class="Header-balance">
+          <div><span>Available</span></div>
+          <div>{available}</div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="Header">
@@ -27,6 +52,7 @@ class Header extends Component {
           {this.renderIndex()}
         </div>
         <div className="Header-right">
+          {this.renderRight()}
         </div>
       </div>
     );
@@ -34,5 +60,6 @@ class Header extends Component {
 }
 
 export default withRouter(connect(state => ({
-  index: state.index
+  index: state.index,
+  account: state.account
 }))(Header));
