@@ -46,7 +46,7 @@ class Header extends Component {
     return (
       <div className="Header">
         <div className="Header-left">
-          <h1>Terebit</h1>
+          <h1>RoboDEX</h1>
         </div>
         <div className="Header-center">
           {this.renderIndex()}
