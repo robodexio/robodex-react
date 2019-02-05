@@ -1,20 +1,23 @@
 .Instrument {
-  height: 50px;
-  padding: 10px;
+  height: 52px;
   display: flex;
+  align-items: center;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 .Instrument > div {
-  margin-right: 50px;
-  line-height: 30px;
+  margin-right: 40px;
+  line-height: 20px;
 }
 
-.Instrument-instrument {
-  font-size: 20px;
+.Instrument > div:first-child {
+  font-size: 18px;
+  margin-left: 20px;
+  padding-bottom: 2px;
 }
 
-.Instrument-title {
+.Instrument span {
   color: #747E8D;
+  font-size: 13px;
+  font-weight: 700;
 }

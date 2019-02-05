@@ -45,6 +45,13 @@ export class TVChartContainer extends React.PureComponent {
 			fullscreen: this.props.fullscreen,
 			autosize: this.props.autosize,
 			studies_overrides: this.props.studiesOverrides,
+			overrides: {
+				"paneProperties.background": "#222222",
+				"paneProperties.vertGridProperties.color": "#454545",
+				"paneProperties.horzGridProperties.color": "#454545",
+				"symbolWatermarkProperties.transparency": 90,
+				"scalesProperties.textColor" : "#AAA"
+			}
 		};
 
 		const tvWidget = new widget(widgetOptions);

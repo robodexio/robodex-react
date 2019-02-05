@@ -39,8 +39,8 @@ class Orderbook extends Component {
     const mark = this.props.orderbook ? this.props.orderbook.mark.toFixed(2) : '';
     return (
       <div className="Orderbook-prices">
-        <div>Last: {last}</div>
-        <div>Mark: {mark}</div>
+        <div><span>Last:</span> {last}</div>
+        <div><span>Mark:</span> {mark}</div>
       </div>
     );
   }

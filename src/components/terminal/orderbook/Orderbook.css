@@ -4,4 +4,14 @@
 
 .Orderbook-prices {
   height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.Orderbook-prices span {
+  color: #747E8D;
+  font-size: 13px;
+  font-weight: 700;
 }
