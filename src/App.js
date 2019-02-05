@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import Aside from './components/aside/Aside';
 import Terminal from './components/terminal/Terminal';
 import Index from './components/index/Index';
+import About from './components/about/About';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <main>
             <Route exact path="/" component={Terminal} />
             <Route path="/index" component={Index} />
+            <Route path="/about" component={About} />
           </main>
         </div>
       </Router>
