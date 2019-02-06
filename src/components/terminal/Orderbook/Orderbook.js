@@ -3,9 +3,38 @@ import './Orderbook.css';
 import { connect } from 'react-redux';
 
 class Orderbook extends Component {
+  renderLevel(level, index) {
+    if (level) {
+      return (
+        <tr key={index}>
+          <td>{level.price.toFixed(2)}</td>
+          <td>{level.qty}</td>
+          <td>{level.cm}</td>
+        </tr>
+      );
+    } else {
+      return (
+        <tr key={index}>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      );
+    }
+  }
+
   renderAsks() {
+    let asks = [];
+    if (this.props.orderbook) {
+      asks = this.props.orderbook.asks;
+    }
+
+    asks = asks.slice(0, Math.min(asks.length, 5));
+    asks = asks.concat([null, null, null, null, null].slice(0, 5 - asks.length));
+    asks = asks.reverse()
+
     return (
-      <div>
+      <div className="Asks">
         <table>
           <thead>
             <tr>
@@ -15,7 +44,7 @@ class Orderbook extends Component {
             </tr>
           </thead>
           <tbody>
-
+            {asks.map((l, i) => this.renderLevel(l, i))}
           </tbody>
         </table>
       </div>
@@ -23,11 +52,19 @@ class Orderbook extends Component {
   }
 
   renderBids() {
+    let bids = []
+    if (this.props.orderbook) {
+      bids = this.props.orderbook.bids
+    }
+
+    bids = bids.slice(0, Math.min(bids.length, 5));
+    bids = bids.concat([null, null, null, null, null].slice(0, 5 - bids.length));
+
     return (
-      <div>
+      <div className="Bids">
         <table>
           <tbody>
-
+            {bids.map((l, i) => this.renderLevel(l, i))}
           </tbody>
         </table>
       </div>

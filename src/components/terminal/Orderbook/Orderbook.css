@@ -1,5 +1,5 @@
 .Orderbook {
-  height: 400px;
+  height: 432px;
 }
 
 .Orderbook-prices {
@@ -14,4 +14,17 @@
   color: #747E8D;
   font-size: 13px;
   font-weight: 700;
+}
+
+.Orderbook th, .Orderbook td {
+  line-height: 25px;
+  width: 33%;
+}
+
+.Asks td:first-child {
+  color: #FE4640;
+}
+
+.Bids td:first-child {
+  color: #01D25B;
 }
