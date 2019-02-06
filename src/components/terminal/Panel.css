@@ -13,3 +13,47 @@
 .Panel > footer {
   height: 20px;
 }
+
+/* Table */
+
+.Panel table {
+  width: 100%;
+  border-collapse: collapse; 
+  border-spacing: 0;
+}
+
+.Panel td, th {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 30px;
+  text-align: right;
+  border: #474D57 solid 1px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.Panel th {
+  color: #747E8D;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Panel th:first-child, td:first-child {
+  border-left: none;
+}
+
+.Panel th:last-child, td:last-child {
+  border-right: none;
+}
+
+.Panel tr:nth-child(even) td { 
+  background: rgba(0, 0, 0, 0.06)
+}
+
+.Panel tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05)
+}
+
+.Panel thead tr:hover {
+  background: none;
+}

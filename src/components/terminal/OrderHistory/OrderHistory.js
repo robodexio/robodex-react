@@ -33,7 +33,7 @@ class OrderHistory extends Component {
     }
 
     return (
-      <div className="table-scrollable-wrapper">
+      <div className="HorScrollable">
         <table>
           <thead>
             <tr>
