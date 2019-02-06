@@ -1,3 +1,108 @@
 .Trade {
   height: 432px;
 }
+
+.Trade main {
+  padding: 0px 15px;
+}
+
+/* Type */
+
+.Trade-typeSelector {
+  margin-bottom: 25px;
+}
+
+.Trade-typeSelector ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Trade-typeSelector li {
+  display: block;
+  line-height: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.Trade-typeSelector .selected {
+  border-bottom: #007EE3 solid 2px;
+}
+
+/* Buttons */
+
+.Trade-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.Trade-button-sell, .Trade-button-buy {
+  flex: 1;
+}
+
+
+.Trade-button-sell, .Trade-button-buy {
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.Trade-button-sell {
+  background: #FE4640;
+}
+
+.Trade-button-buy {
+  background: #01D25B;
+  margin-right: 10px;
+}
+
+.Trade-button-sell:hover {
+  background: #FE5853;
+}
+
+.Trade-button-buy:hover {
+  background: #1AD66B;
+}
+
+/* Field */
+
+.Trade-field {
+  margin-bottom: 20px;
+}
+
+.Trade-field header {
+  margin-bottom: 7px;
+  color: #747E8D;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Trade-field > div {
+  height: 40px;
+  background: #242A34;
+  border-radius: 4px;
+}
+
+.Trade-field input {
+  display: block;
+  background: none;
+  outline: none;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
