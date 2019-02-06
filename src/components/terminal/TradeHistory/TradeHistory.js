@@ -5,8 +5,8 @@ import dateformat from 'dateformat';
 
 class TradeHistory extends Component {
   renderTrade(trade) {
-    const quantityETH = trade.quantity / trade.price;
     const directionClass = trade.direction === 'sell' ? 'red' : 'green';
+    const quantityETH = trade.quantity / trade.price;
     
     return (
       <tr>

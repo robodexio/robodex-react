@@ -15,7 +15,6 @@ class Terminal extends Component {
   render() {
     return (
       <div className="Terminal">
-        <OrderHistory />
         <Balances />
         <Plot />
         <Instrument />
@@ -26,7 +25,7 @@ class Terminal extends Component {
         </div>
         <Positions />
         <OpenOrders />
-        
+        <OrderHistory />
         <TradeHistory />
       </div>
     );
