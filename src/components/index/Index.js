@@ -12,7 +12,7 @@ class Index extends Component {
           <td>{ex.name}</td>
           <td className={weightClass}>{ex.price.toFixed(2)}</td>
           <td>{dateformat(ex.time, 'HH:MM:ss', true)}</td>
-          <td className={weightClass}>{ex.weight ? ex.weight.toFixed(2) + '%' : '0.00%'}</td>
+          <td className={weightClass}>{ex.weight ? (ex.weight * 100).toFixed(2) + '%' : '0.00%'}</td>
         </tr>
       );
     } else {
