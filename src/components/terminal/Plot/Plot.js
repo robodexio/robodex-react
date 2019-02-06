@@ -6,7 +6,11 @@ class Plot extends Component {
   render() {
     return (
       <div className="Plot Panel">
-        <TVChartContainer />
+        <header>Charts</header>
+        <main>
+          <TVChartContainer />
+        </main>
+        <footer></footer>
       </div>
     );
   }

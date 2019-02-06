@@ -36,8 +36,9 @@ export class TVChartContainer extends React.PureComponent {
 			library_path: this.props.libraryPath,
 
 			locale: getLanguageFromURL() || 'en',
-			disabled_features: ['use_localstorage_for_settings'],
-			enabled_features: ['study_templates'],
+			disabled_features: ['use_localstorage_for_settings', 'left_toolbar', 'control_bar', 'timeframes_toolbar', 'main_series_scale_menu', 'remove_library_container_border', 'header_widget', 'context_menus', 'border_around_the_chart', 'remove_library_container_border'],
+      enabled_features: [],
+      
 			charts_storage_url: this.props.chartsStorageUrl,
 			charts_storage_api_version: this.props.chartsStorageApiVersion,
 			client_id: this.props.clientId,
@@ -46,12 +47,31 @@ export class TVChartContainer extends React.PureComponent {
 			autosize: this.props.autosize,
 			studies_overrides: this.props.studiesOverrides,
 			overrides: {
-				"paneProperties.background": "#222222",
+				'paneProperties.background': '#333945',
+				'scalesProperties.textColor': '#747E8D',
+
+				'mainSeriesProperties.candleStyle.upColor': '#01D25B',
+				'mainSeriesProperties.candleStyle.downColor': '#FE4640',
+				'mainSeriesProperties.candleStyle.wickUpColor': '#01D25B',
+        'mainSeriesProperties.candleStyle.wickDownColor': '#FE4640',
+        'mainSeriesProperties.candleStyle.borderUpColor': '#01D25B',
+        'mainSeriesProperties.candleStyle.borderDownColor': '#FE4640',
+				
+				"paneProperties.vertGridProperties.color": "#454545",
+        "paneProperties.horzGridProperties.color": "#454545",
+        
+				/*
 				"paneProperties.vertGridProperties.color": "#454545",
 				"paneProperties.horzGridProperties.color": "#454545",
 				"symbolWatermarkProperties.transparency": 90,
 				"scalesProperties.textColor" : "#AAA"
-			}
+				*/
+      },
+      loading_screen: { 
+        backgroundColor: '#333945',
+        foregroundColor: '#333945'
+      },
+      theme: 'Dark'
 		};
 
 		const tvWidget = new widget(widgetOptions);

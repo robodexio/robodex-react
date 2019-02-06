@@ -1,3 +1,7 @@
-.Plot {
-  height: 540px;
+.Plot > main {
+  height: 500px;
+}
+
+.Plot > footer {
+  height: 20px;
 }
