@@ -8,7 +8,7 @@ class Header extends Component {
     const index = this.props.index;
     if (index) {
       return (
-        <div className="Header-index">Etherium Index: {index.price}</div>
+        <div className="Header-index">Etherium Index: {index.price.toFixed(2)}</div>
       );
     } else {
       return (
