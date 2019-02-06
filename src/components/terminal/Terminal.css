@@ -1,25 +1,5 @@
-.Terminal {
-}
-
 .Terminal > div {
   margin: 14px;
-}
-
-.Panel {
-  background: #333945;
-  border-radius: 4px;
-}
-
-.Panel > header {
-  height: 52px;
-  line-height: 52px;
-  padding-left: 20px;
-  font-size: 18px;
-
-}
-
-.Panel > footer {
-  height: 20px;
 }
 
 .Terminal-market {

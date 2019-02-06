@@ -23,7 +23,132 @@ const initialState = {
     }
   ],
   lastTrades: [
-
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'buy',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
+    {
+      price: 103.32,
+      quantity: 40203,
+      direction: 'sell',
+      time: Date.now()
+    },
   ],
   orderHistory: [
     {
