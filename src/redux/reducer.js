@@ -63,6 +63,28 @@ const initialState = {
       time: Date.now(),
       status: 'open'
     }
+  ],
+  openOrders: [
+    {
+
+    },
+    {
+
+    },
+    {
+      
+    }
+  ],
+  positions: [
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
   ]
 };
 
