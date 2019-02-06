@@ -4,19 +4,26 @@ import { connect } from 'react-redux';
 import dateformat from 'dateformat';
 
 class OpenOrders extends Component {
-  renderOrder() {
+  renderOrder(order) {
+    const directionClass = order.direction === 'sell' ? 'red' : 'green';
+    let price = 'Market Price'
+    if (order.type === 'limit') {
+      price = order.price.toFixed(2)
+    }
+    const remaining = order.quantity - order.filledQuantity
+
     return (
       <tr>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
+        <td className={directionClass}>{order.direction}</td>
+        <td>{order.quantity}</td>
+        <td>{price}</td>
+        <td>{order.filledQuantity}</td>
+        <td>{remaining}</td>
+        <td>{order.avgPrice.toFixed(2)}</td>
+        <td>-</td>
+        <td>{dateformat(order.time, 'd mmm HH:MM:ss', true)}</td>
+        <td><div className="Trade-type">{order.type}</div></td>
+        <td><span className="Order-cancel">Cancel</span></td>
       </tr>
     );
   }
@@ -28,7 +35,7 @@ class OpenOrders extends Component {
     }
 
     return (
-      <div className="table-scrollable-wrapper">
+      <div className="HorScrollable">
         <table>
           <thead>
             <tr>

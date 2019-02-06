@@ -66,13 +66,41 @@ const initialState = {
   ],
   openOrders: [
     {
-
+      direction: 'sell',
+      avgPrice: 108.32,
+      quantity: 3202,
+      filledQuantity: 402,
+      type: 'market',
+      time: Date.now(),
+      status: 'filled',
     },
     {
-
+      direction: 'buy',
+      avgPrice: 108.32,
+      quantity: 3202,
+      filledQuantity: 402,
+      type: 'market',
+      time: Date.now(),
+      status: 'open',
     },
     {
-      
+      direction: 'sell',
+      avgPrice: 108.32,
+      quantity: 3202,
+      filledQuantity: 402,
+      type: 'limit',
+      time: Date.now(),
+      status: 'filled',
+      price: 108.42
+    },
+    {
+      direction: 'sell',
+      avgPrice: 108.32,
+      quantity: 3202,
+      filledQuantity: 402,
+      type: 'market',
+      time: Date.now(),
+      status: 'open',
     }
   ],
   positions: [
