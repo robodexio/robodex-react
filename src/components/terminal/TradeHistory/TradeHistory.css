@@ -51,9 +51,14 @@ tr:nth-child(even) td {
   width: 100%;
 }
 
-td:first-child {
+th:first-child, td:first-child {
   border-left: none;
 }
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
 /*
 tr:last-child td {
   border-bottom: none;

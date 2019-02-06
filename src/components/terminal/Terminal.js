@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Terminal.css';
+import './Panel.css';
 import Balances from './Balances/Balances'
 import Plot from './Plot/Plot'
 import Instrument from './Instrument/Instrument'

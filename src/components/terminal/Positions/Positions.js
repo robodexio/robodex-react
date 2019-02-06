@@ -5,18 +5,23 @@ import dateformat from 'dateformat';
 
 class Positions extends Component {
   renderPosition(position) {
+    const sizeClass = position.size > 0 ? 'green' : 'red';
+    const plClass = position.profitLoss > 0 ? 'green' : 'red';
+    const uplClass = position.floatingPl > 0 ? 'green' : 'red';
+    const rplClass = position.realizedPl > 0 ? 'green' : 'red';
+
     return (
       <tr>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
-        <td>Buy</td>
+        <td className={sizeClass}>{position.size}</td>
+        <td className={sizeClass}>{position.sizeEth.toFixed(4)}</td>
+        <td>{position.avgPrice.toFixed(2)}</td>
+        <td>{position.markPrice.toFixed(2)}</td>
+        <td className={plClass}>{position.profitLoss.toFixed(4)}</td>
+        <td className={uplClass}>{position.floatingPl.toFixed(4)}</td>
+        <td className={rplClass}>{position.realizedPl.toFixed(4)}</td>
+        <td>{position.initialMargin.toFixed(4)}</td>
+        <td>{position.maintenanceMargin.toFixed(4)}</td>
+        <td></td>
       </tr>
     );
   }
