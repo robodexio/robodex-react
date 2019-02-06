@@ -1,6 +1,14 @@
 .TradeHistory {
 }
 
+.TradeHistory th:nth-child(1) {
+  width: 50px;
+}
+
+.TradeHistory tr:nth-child(1) {
+  width: 50px;
+}
+
 table {
   width: 100%;
   line-height: 20px;
@@ -55,4 +63,12 @@ tr:last-child td {
 th {
   min-width: 80px;
   width:auto !important;
+}
+
+.Trade-type {
+  border-radius: 4px;
+  background: #538CBA;
+  margin: 4px 0px;
+  text-align: center;
+  line-height: 20px;
 }

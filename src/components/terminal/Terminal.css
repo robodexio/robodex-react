@@ -18,6 +18,10 @@
 
 }
 
+.Panel > footer {
+  height: 20px;
+}
+
 .Terminal-market {
   display: flex;
   flex-direction: row;

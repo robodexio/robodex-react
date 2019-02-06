@@ -1,4 +1,31 @@
 const initialState = {
+  tradeHistory: [
+    {
+      quantity: 3232,
+      price: 108.30,
+      direction: 'buy',
+      type: 'limit',
+      time: Date.now()
+    },
+    {
+      quantity: 3232,
+      price: 108.30,
+      direction: 'sell',
+      type: 'limit',
+      time: Date.now()
+    },
+    {
+      quantity: 3232,
+      price: 108.30,
+      direction: 'buy',
+      type: 'market',
+      time: Date.now()
+    }
+  ],
+  lastTrades: [
+
+  ],
+
 };
 
 const reducer = (state = initialState, action) => {
