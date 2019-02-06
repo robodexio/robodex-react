@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import dateformat from 'dateformat';
 
 class Positions extends Component {
-  renderPosition(position) {
+  renderPosition(position, index) {
     const sizeClass = position.size > 0 ? 'green' : 'red';
     const plClass = position.profitLoss > 0 ? 'green' : 'red';
     const uplClass = position.floatingPl > 0 ? 'green' : 'red';
     const rplClass = position.realizedPl > 0 ? 'green' : 'red';
 
     return (
-      <tr>
+      <tr key={index}>
         <td className={sizeClass}>{position.size}</td>
         <td className={sizeClass}>{position.sizeEth.toFixed(4)}</td>
         <td>{position.avgPrice.toFixed(2)}</td>
@@ -29,7 +29,7 @@ class Positions extends Component {
   renderPositions() {
     let positions = [];
     if (this.props.positions) {
-      positions = this.props.positions.map(this.renderPosition);
+      positions = this.props.positions.map((p, i) => this.renderPosition(p, i));
     }
 
     return (

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import dateformat from 'dateformat';
 
 class OpenOrders extends Component {
-  renderOrder(order) {
+  renderOrder(order, index) {
     const directionClass = order.direction === 'sell' ? 'red' : 'green';
     let price = 'Market Price'
     if (order.type === 'limit') {
@@ -13,7 +13,7 @@ class OpenOrders extends Component {
     const remaining = order.quantity - order.filledQuantity
 
     return (
-      <tr>
+      <tr key={index}>
         <td className={directionClass}>{order.direction}</td>
         <td>{order.quantity}</td>
         <td>{price}</td>
@@ -31,7 +31,7 @@ class OpenOrders extends Component {
   renderOrders() {
     let orders = [];
     if (this.props.orders) {
-      orders = this.props.orders.map(this.renderOrder);
+      orders = this.props.orders.map((o, i) => this.renderOrder(o, i));
     }
 
     return (

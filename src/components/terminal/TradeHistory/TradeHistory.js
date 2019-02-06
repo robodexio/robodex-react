@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import dateformat from 'dateformat';
 
 class TradeHistory extends Component {
-  renderTrade(trade) {
+  renderTrade(trade, index) {
     const directionClass = trade.direction === 'sell' ? 'red' : 'green';
     const quantityETH = trade.quantity / trade.price;
     
     return (
-      <tr>
+      <tr key={index}>
         <td className={directionClass}>{trade.direction}</td>
         <td>{trade.quantity}</td>
         <td>{quantityETH.toFixed(8)}</td>
@@ -23,7 +23,7 @@ class TradeHistory extends Component {
   renderTrades() {
     let trades = [];
     if (this.props.trades) {
-      trades = this.props.trades.map(this.renderTrade);
+      trades = this.props.trades.map((t, i) => this.renderTrade(t, i));
     }
 
     return (

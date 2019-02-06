@@ -8,7 +8,7 @@ class Plot extends Component {
       <div className="Plot Panel">
         <header>Charts</header>
         <main>
-          <TVChartContainer />
+          <TVChartContainer datafeedUrl="https://udf.robodex.io" symbol="ETH-PERPETUAL" interval="1" />
         </main>
         <footer></footer>
       </div>

@@ -37,6 +37,7 @@ export class TVChartContainer extends React.PureComponent {
 
 			locale: getLanguageFromURL() || 'en',
 			disabled_features: ['use_localstorage_for_settings', 'left_toolbar', 'control_bar', 'timeframes_toolbar', 'main_series_scale_menu', 'remove_library_container_border', 'header_widget', 'context_menus', 'border_around_the_chart', 'remove_library_container_border'],
+      //disabled_features: [],
       enabled_features: [],
       
 			charts_storage_url: this.props.chartsStorageUrl,
