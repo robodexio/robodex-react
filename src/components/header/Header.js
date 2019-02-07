@@ -17,6 +17,28 @@ class Header extends Component {
     }
   }
 
+  renderAccount() {
+    const goToAccount = () => {
+      this.props.history.push('/account');
+    };
+
+    if (window.ethereum) {
+      return (
+        <div className="Header-account" onClick={goToAccount}>
+          <div className="green">Account</div>
+          <div>{window.ethereum.selectedAddress}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="Header-account" onClick={goToAccount}>
+          <div className="red">Account</div>
+          <div>Click to setup</div>
+        </div>
+      );
+    }    
+  }
+
   renderRight() {
     const account = this.props.account
     const equity = account ? account.equity.toFixed(4) : ''
@@ -38,6 +60,7 @@ class Header extends Component {
           <div><span>Available</span></div>
           <div>{available}</div>
         </div>
+        {this.renderAccount()}
       </div>
     );
   }

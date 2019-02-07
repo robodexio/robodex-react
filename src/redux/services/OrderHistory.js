@@ -21,6 +21,7 @@ class OrderHistory {
         type: 'ORDER_HISTORY',
         orders
       });
+    }).catch(err => {
     });
   }
 }

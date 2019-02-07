@@ -55,8 +55,6 @@ class API extends EventEmitter {
   // JSONRPC
 
   handleJSONRPC(msg) {
-    console.log('HANDLE JSONRPC');
-    console.log(msg);
     if (msg.id) {
       const promise = this.rpcPromises[msg.id];
       if (promise) {
@@ -78,7 +76,7 @@ class API extends EventEmitter {
 
   sendJSONRPC(method, params) {
     if (this.ws.readyState !== WebSocket.OPEN) {
-      return Promise.reject();
+      return Promise.reject(new Error('Socket not opened'))
     }
 
     const id = this.nextRpcId();

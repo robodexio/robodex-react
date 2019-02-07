@@ -1,0 +1,30 @@
+.Account {
+  padding: 15px;
+}
+
+.Account-pager {
+  margin-bottom: 25px;
+}
+
+.Account-pager ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Account-pager li {
+  display: block;
+  line-height: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.Account-pager .selected {
+  border-bottom: #007EE3 solid 2px;
+}
+
+.Account main {
+  padding-left: 15px;
+  padding-right: 15px;
+}

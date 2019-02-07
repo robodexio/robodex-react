@@ -21,6 +21,7 @@ class TradeHistory {
         type: 'TRADE_HISTORY',
         trades
       });
+    }).catch(err => {
     });
   }
 }

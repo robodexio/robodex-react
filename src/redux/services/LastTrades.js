@@ -21,6 +21,7 @@ class LastTrades {
         type: 'LAST_TRADES',
         trades
       });
+    }).catch(err => {
     });
   }
 }

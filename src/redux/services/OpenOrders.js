@@ -21,6 +21,7 @@ class OpenOrders {
         type: 'OPEN_ORDERS',
         orders
       });
+    }).catch(err => {
     });
   }
 }

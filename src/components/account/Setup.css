@@ -1,0 +1,47 @@
+.Setup {
+  display: flex;
+}
+
+.Setup aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.Setup aside li {
+  line-height: 32px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  color: #747E8D;
+  cursor: pointer;
+}
+
+.Setup aside li:hover {
+  color: #fff;
+}
+
+.Setup .selected {
+  color: #fff;
+}
+
+.Setup article {
+  padding-left: 60px;
+  font-size: 15px;
+  padding-top: 7px;
+}
+
+.Setup article p {
+  color: #747E8D;
+  margin-top: 0px;
+}
+
+.Setup article a {
+  color: #007EE3;
+}
+
+.Setup article a:visited {
+  color: #007EE3;
+}

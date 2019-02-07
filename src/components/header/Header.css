@@ -43,6 +43,8 @@
 
 .Header-right > div {
   display: flex;
+  align-content: stretch;
+  height: 100%;
 }
 
 .Header-right span {
@@ -65,4 +67,32 @@
 .Header-balance {
   margin-right: 30px;
   margin-top: 6px;
+}
+
+.Header-account {
+  padding-top: 7px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.Header-account div:first-child {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Header-account:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.Header-account:active {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Header-account div:nth-child(2) {
+  max-width: 100px;
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;
 }
