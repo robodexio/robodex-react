@@ -14,8 +14,8 @@ class API extends EventEmitter {
   }
 
   connect() {
-    this.ws = new WebSocket('ws://localhost:9000');
-    //this.ws = new WebSocket('wss://api.robodex.io');
+    //this.ws = new WebSocket('ws://localhost:9000');
+    this.ws = new WebSocket('wss://api.robodex.io');
     
     this.ws.onopen = this.onOpen;
     this.ws.onclose = this.onClose;
