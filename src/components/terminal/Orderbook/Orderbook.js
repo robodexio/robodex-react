@@ -15,9 +15,9 @@ class Orderbook extends Component {
     } else {
       return (
         <tr key={index}>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
         </tr>
       );
     }

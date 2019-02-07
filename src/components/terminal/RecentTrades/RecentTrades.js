@@ -22,7 +22,7 @@ class RecentTrades extends Component {
       trades = this.props.trades;
     }
 
-    trades = trades.slice(0, Math.min(trades.length, 12));
+    trades = trades.slice(0, 12);
 
     return (
       <table>

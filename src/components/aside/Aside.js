@@ -10,8 +10,7 @@ function Link(props) {
 
 class Aside extends Component {
   renderTime() {
-    const online = !!this.props.online;
-    const onlineClass = online ? 'green-bg' : 'red-bg';
+    const onlineClass = this.props.online ? 'green-bg' : 'red-bg';
     const time = '' || (this.props.time && dateformat(this.props.time, 'd mmm yyyy HH:MM:ss', true));
 
     return (
