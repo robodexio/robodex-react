@@ -32,6 +32,8 @@ export default function (state = initialState, action) {
       return { ...state, tradeHistory: action.trades };
     case 'ORDER_HISTORY':
       return { ...state, orderHistory: action.orders };
+    case 'OPEN_ORDERS':
+      return { ...state, openOrders: action.orders };
     default:
       return state;
   }

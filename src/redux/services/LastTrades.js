@@ -7,6 +7,12 @@ class LastTrades {
     setInterval(() => {
       this.loadTrades()
     }, 5000);
+
+    this.api.on('online', online => {
+      if (online) {
+        this.loadTrades();
+      }
+    });
   }
 
   loadTrades() {
